@@ -46,6 +46,7 @@ def main():
     max_sum = sh.Command(MAX_SUM_PATH)
     linear_outputs = execute(max_sum, 'linear')
     quadratic_outputs = execute(max_sum, 'quadratic')
+    cubic_outputs = execute(max_sum,'cubic')
 
 
 if __name__ == '__main__':
