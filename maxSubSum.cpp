@@ -30,10 +30,10 @@ int main ( int argc, char* argv[])
     assert(argc >= 2);
 
     // Alimenta o gerador randomico com um seed baseado no tempo atual.
-    // Assim, garantimos que os valores para o vetor a mudem em cada execução.
+    // Assim, garantimos que os valores para o vetor mudem em cada execução.
     srand(std::time(0));
 
-    for ( long int c = 0; c < 100; c++ )
+    for (long int c = 0; c < 25; c++ )
     {
         a.push_back(rand());
     }
@@ -70,7 +70,8 @@ int main ( int argc, char* argv[])
             showClockResults(begin, end);
         }
     }
-/*  else if ( strcmp(argv[1], "nlogn") == 0 )
+    /*
+    else if ( strcmp(argv[1], "nlogn") == 0 )
     {
         for ( register int i = 0; i < 100; i++ )
         {
@@ -79,13 +80,14 @@ int main ( int argc, char* argv[])
             end = clock();
             showClockResults(begin, end);
         }
-    }*/
+    }
+    */
 
     return 0;
 }
 
 // Esta função só foi utilizada nos testes e pode ser removida.
-void printVector( const vector<int> & a)
+/*void printVector( const vector<int> & a)
 {
     cout << "[ ";
     // Imprime o vetor a na tela.
@@ -96,7 +98,8 @@ void printVector( const vector<int> & a)
         cout << *i << " ";
     }
     cout << "]" << endl;
-}
+}*/
+
 
 int maxSubSumLinear( const vector<int> & a )
 {
@@ -145,7 +148,8 @@ int maxSubSumCubic( const vector<int> & a )
 
     return maxSum;
 }
-/*int maxSubSumNlogN( const vector<int> & a )
+/*
+int maxSubSumNlogN( const vector<int> & a )
 {
     int sum = 0, maxSum = 0;
 
